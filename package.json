@@ -1,6 +1,13 @@
 {
-  "main": "index.html",
-  "scripts": {
-    "start": "parcel index.html --open"
+  "name": "lit-element",
+  "version": "3.2.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "A simple base class for creating fast, lightweight web components",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lit/lit.git",
+    "directory": "packages/lit-element"
   }
-}
