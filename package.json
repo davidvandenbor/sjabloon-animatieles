@@ -2,8 +2,5 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.6.1"
   }
 }
