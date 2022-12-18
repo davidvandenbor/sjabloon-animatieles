@@ -1,1 +1,253 @@
+.circle {
+	background: red;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
 
+.button {
+	background: black;
+	color: white;
+	padding: 20px 40px;
+	font-size: 30px;
+	display: table;
+	border-radius: 10px;
+	transform: translateZ(0);
+	will-change: transform;
+}
+
+/* Hieronder worden CSS TRANSITIONS
+ in plaats van keyframe animations gebruikt.
+ Weet je het verschil?
+ */
+
+.button:hover {
+	transition: 1s ease;
+	background: green;
+}
+
+/* 
+  ╔════════════════════════════════════════════════╗
+  ║ HIERONDER DE ANIMATIES!                        ║
+  ╚════════════════════════════════════════════════╝
+
+ Je kan op twee manier objecten laten bewegen:
+ 1. met "position:absolute" en "top/left"
+ 2. met CSS transforms
+ methode 2 is beter voor video/rendering performance,
+ je videokaart speelt de animaties af in plaats van je
+ processor, zodat je vloeiendere animaties krijgt.
+ EXAMPLE1 gebruikt "positioning" variant en
+ EXAMPLE2 gebruikt transforms.
+ */
+
+@keyframes example1 {
+	0% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+		box-shadow: 10px 10px 20px rgb(0, 0, 0);
+		border: solid 20px black;
+	}
+
+	25% {
+		background-color: purple;
+		left: 300px;
+		top: 0px;
+	}
+
+	50% {
+		background-color: blue;
+		left: 300px;
+		top: 200px;
+		box-shadow: 10px 10px 30px rgb(0, 0, 0);
+		border: solid 20px black;
+	}
+
+	75% {
+		background-color: green;
+		left: 0px;
+		top: 200px;
+		box-shadow: 30px 30px 90px rgb(0, 0, 0);
+	}
+
+	100% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+
+		border: solid 90px black;
+	}
+}
+
+@keyframes example2 {
+	0% {
+		background-color: red;
+		transform: translateX(0px) translateY(0px);
+	}
+
+	25% {
+		background-color: purple;
+		transform: translateX(300px) translateY(0px);
+	}
+
+	50% {
+		background-color: black;
+		transform: translateX(300px) translateY(200px) scaleX(2) scaleY(2);
+		opacity: 1;
+	}
+
+	75% {
+		background-color: green;
+		transform: translateX(0px) translateY(200px);
+		opacity: 0;
+	}
+
+	100% {
+		background-color: red;
+		transform: translateX(0px) translateY(0px);
+		opacity: 1;
+	}
+}
+
+/*
+  ╔════════════════════════════════════════════════╗
+  ║  ANIMATION PROPERTY VALUES CHEATSHEET!!        ║
+  ╚════════════════════════════════════════════════╝
+
+ ANIMATION-NAME
+ Specifies the name of the keyframe you want to bind to the selector
+ keyframename|none|initial|inherit;
+
+ ANIMATION-TIMING-FUNCTION
+ Specifies the speed curve of the animation
+ linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+
+ ANIMATION-DURATION
+ Specifies how many seconds or milliseconds an animation takes to complete
+ time|initial|inherit;
+
+ ANIMATION-DIRECTION
+ Specifies whether or not the animation should play in reverse on alternate cycles
+ normal|reverse|alternate|alternate-reverse|initial|inherit;
+
+ ANIMATION-FILL-MODE
+ Specifies what values are applied by the animation outside the time it is executing. for instance, let the animation END and PAUSE at the last keyframe (forwards)
+ none|forwards|backwards|both|initial|inherit;
+
+ ANIMATION-ITERATION-COUNT:
+ Specifies how many times an animation should be played
+ number|infinite|initial|inherit;
+
+ ANIMATION-PLAY-STATE
+ Specifies whether the animation is running or paused
+ paused|running|initial|inherit;
+
+/* 
+  ╔════════════════════════════════════════════════╗
+  ║  TRANSFORM PROPERTIES CHEATSHEET!!             ║
+  ╚════════════════════════════════════════════════╝
+
+TRANSLATION (MOVING)
+
+    translate()
+    Translates an element 
+    on the 2D plane.
+
+    translate3d()
+    Translates an element 
+    in 3D space.
+
+    translateX()
+    Translates an element 
+    horizontally.
+
+    translateY()
+    Translates an element 
+    vertically.
+
+    translateZ()
+    Translates an element 
+    along the z-axis.
+				 
+ROTATION
+   
+    rotate()
+    Rotates an element around 
+    a fixed point on the 2D plane.
+
+    rotate3d()
+    Rotates an element around 
+    a fixed axis in 3D space.
+
+    rotateX()
+    Rotates an element around 
+    the horizontal axis.
+
+    rotateY()
+    Rotates an element around 
+    the vertical axis.
+
+    rotateZ()
+    Rotates an element around 
+    the z-axis.
+
+SCALING (RESIZING)
+
+    scale()
+    Scales an element 
+    up or down on the 2D plane.
+
+    scale3d()
+    Scales an element 
+    up or down in 3D space.
+
+    scaleX()
+    Scales an element 
+    up or down horizontally.
+
+    scaleY()
+    Scales an element 
+    up or down vertically.
+
+    scaleZ()
+    Scales an element 
+    up or down along the z-axis.
+
+SKEWING (DISTORTION)
+
+    skew()
+    Skews an element 
+    on the 2D plane.
+
+    skewX()
+    Skews an element 
+    in the horizontal direction.
+
+    skewY()
+    Skews an element 
+    in the vertical direction.
+
+*/
+
+/* 
+  ╔════════════════════════════════════════════════╗
+  ║ EASE-IN-OUT CHEATSHEET!!                     ║
+  ╚════════════════════════════════════════════════╝
+ */
+
+/* VOORBEELDEN VAN VERTRAGING/VERSNELLING (EASE IN-OUT)
+/* transition-timing-function: ease; */
+/* transition-timing-function: ease-in; */
+/* transition-timing-function: ease-out; */
+/* transition-timing-function: ease-in-out; */
+/* transition-timing-function: cubic-bezier(0.4, -.2, 0.42, 1.20); */
+/* transition-timing-function: steps(7); */
+/* transition-timing-function: steps(5, jump-none); */
+/* transition-timing-function: steps(8, jump-both); */
+/* transition-timing-function: steps(4, jump-start); */
+/* transition-timing-function: steps(2, jump-end); */
+/* transition-timing-function: step-start; */
+/* transition-timing-function: step-end; */
+/* transition-timing-function: ease, steps(3), cubic-bezier(1, 0, 0, 1); */
+/* } 
