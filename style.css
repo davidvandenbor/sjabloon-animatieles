@@ -1,4 +1,7 @@
 .circle {
+  animation-name: voorbeeld1;
+  animation-duration:4s;
+  animation-iteration-count:infinite;
 	background: red;
 	width: 100px;
 	height: 100px;
@@ -41,71 +44,37 @@
  EXAMPLE2 gebruikt transforms.
  */
 
-@keyframes example1 {
-	0% {
-		background-color: red;
-		left: 0px;
-		top: 0px;
-		box-shadow: 10px 10px 20px rgb(0, 0, 0);
-		border: solid 20px black;
-	}
-
-	25% {
-		background-color: purple;
-		left: 300px;
-		top: 0px;
-	}
-
-	50% {
-		background-color: blue;
-		left: 300px;
-		top: 200px;
-		box-shadow: 10px 10px 30px rgb(0, 0, 0);
-		border: solid 20px black;
-	}
-
-	75% {
-		background-color: green;
-		left: 0px;
-		top: 200px;
-		box-shadow: 30px 30px 90px rgb(0, 0, 0);
-	}
-
-	100% {
-		background-color: red;
-		left: 0px;
-		top: 0px;
-
-		border: solid 90px black;
-	}
-}
-
-@keyframes example2 {
+@keyframes voorbeeld1 {
 	0% {
 		background-color: red;
 		transform: translateX(0px) translateY(0px);
+    border:solid 0 orange;
 	}
 
 	25% {
 		background-color: purple;
-		transform: translateX(300px) translateY(0px);
+		transform: translateX(400px) translateY(0px);
+    border:solid 0 orange;
 	}
 
 	50% {
 		background-color: black;
-		transform: translateX(300px) translateY(200px) scaleX(2) scaleY(2);
+		transform: translateX(400px) translateY(300px) scaleX(2) scaleY(2);
+    border:solid 20 orange;
 		opacity: 1;
 	}
 
 	75% {
 		background-color: green;
-		transform: translateX(0px) translateY(200px);
+		transform: translateX(0px) translateY(300px);
+    border:solid 20px orange;
 		opacity: 0;
 	}
 
 	100% {
 		background-color: red;
 		transform: translateX(0px) translateY(0px);
+    border:solid 0 yellow;
 		opacity: 1;
 	}
 }
@@ -232,7 +201,7 @@ SKEWING (DISTORTION)
 
 /* 
   ╔════════════════════════════════════════════════╗
-  ║ EASE-IN-OUT CHEATSHEET!!                     ║
+  ║ EASE-IN-OUT CHEATSHEET!!                       ║
   ╚════════════════════════════════════════════════╝
  */
 
