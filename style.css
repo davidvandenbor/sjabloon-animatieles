@@ -44,40 +44,7 @@
  EXAMPLE2 gebruikt transforms.
  */
 
-@keyframes voorbeeld1 {
-	0% {
-		background-color: red;
-		transform: translateX(0px) translateY(0px);
-    border:solid 0 orange;
-	}
-
-	25% {
-		background-color: purple;
-		transform: translateX(400px) translateY(0px);
-    border:solid 0 orange;
-	}
-
-	50% {
-		background-color: black;
-		transform: translateX(400px) translateY(300px) scaleX(2) scaleY(2);
-    border:solid 20 orange;
-		opacity: 1;
-	}
-
-	75% {
-		background-color: green;
-		transform: translateX(0px) translateY(300px);
-    border:solid 20px orange;
-		opacity: 0;
-	}
-
-	100% {
-		background-color: red;
-		transform: translateX(0px) translateY(0px);
-    border:solid 0 yellow;
-		opacity: 1;
-	}
-}
+// KEYFRAME ANIMATIE
 
 /*
   ╔════════════════════════════════════════════════╗
