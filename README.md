@@ -1,4 +1,4 @@
-# HTML-starter-template
+# Sjabloon voor CSS animatie workshop/les
 
 Play around with the code in **StackBlitz** > [click here!](https://stackblitz.com/~/github.com/davidvandenbor/html-starter-template)
 
